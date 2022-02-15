@@ -161,32 +161,50 @@ def scrape_pubmed(search_term):
 
 
 
-search = "diffusion tensor imaging AND mice"
-df_mice = scrape_pubmed(search)
+#search = "diffusion tensor imaging AND mice"
+#df_mice = scrape_pubmed(search)
 
-search = "diffusion tensor imaging AND rats"
-df_rats = scrape_pubmed(search)
+#search = "diffusion tensor imaging AND rats"
+#df_rats = scrape_pubmed(search)
 
-search = "diffusion tensor imaging AND ferrets"
-df_ferrets = scrape_pubmed(search)
+#search = "diffusion tensor imaging AND ferrets"
+#df_ferrets = scrape_pubmed(search)
 
-search = "diffusion MRI AND mice"
-df_mri_mice = scrape_pubmed(search)
+#search = "diffusion MRI AND mice"
+#df_mri_mice = scrape_pubmed(search)
 
-search = "diffusion MRI AND rats"
-df_mri_rats = scrape_pubmed(search)
+#search = "diffusion MRI AND rats"
+#df_mri_rats = scrape_pubmed(search)
 
-search = "diffusion MRI AND ferrets"
-df_mri_ferrets = scrape_pubmed(search)
+#search = "diffusion MRI AND ferrets"
+#df_mri_ferrets = scrape_pubmed(search)
 
 #df_concat = pd.concat([df_mice, df_rats, df_ferrets, df_mri_mice, df_mri_rats, df_mri_ferrets])
 
-df_concat = pd.concat([df_mice, df_rats, df_ferrets, df_mri_ferrets])
+#df_concat = pd.concat([df_mice, df_rats, df_ferrets, df_mri_ferrets])
 
+search = "Axonal Damage AND Alcohol Use Disorder"
+df_aud1 = scrape_pubmed(search)
+
+search = "Axonal Damage AND Alcohol Use Disorder AND MRI"
+df_aud2 = scrape_pubmed(search)
+
+search = "Axonal Damage AND Alcohol Addiction"
+df_aud2 = scrape_pubmed(search)
+
+search = "diffusion MRI AND Axonal Damage"
+df_mri1 = scrape_pubmed(search)
+
+search = "diffusion MRI AND Axonal Death"
+df_mri2 = scrape_pubmed(search)
+
+
+
+df_concat = pd.concat([
 df_unique = df_concat.drop_duplicates()
 
 
-df_unique.to_csv('/Users/amr/Dropbox/dti_review/articles_unique.csv')
+df_unique.to_csv('/media/mk/Dropbox/Dropbox/articles_aud_unique.csv')
 #     All data are stored under the mnemonic appearing in the Medline
 #  24      file. These mnemonics have the following interpretations:
 #  25
