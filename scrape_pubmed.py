@@ -200,7 +200,7 @@ df_mri2 = scrape_pubmed(search)
 
 
 
-df_concat = pd.concat([
+df_concat = pd.concat([df_aud1,df_aud2,df_aud3,df_mri1,df_mri2])
 df_unique = df_concat.drop_duplicates()
 
 
