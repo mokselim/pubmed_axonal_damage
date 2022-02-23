@@ -183,28 +183,7 @@ def scrape_pubmed(search_term):
 
 #df_concat = pd.concat([df_mice, df_rats, df_ferrets, df_mri_ferrets])
 
-search = "Axonal Damage AND Alcohol Use Disorder"
-df_aud1 = scrape_pubmed(search)
 
-search = "Axonal Damage AND Alcohol Use Disorder AND MRI"
-df_aud2 = scrape_pubmed(search)
-
-search = "Axonal Damage AND Alcohol Addiction"
-df_aud2 = scrape_pubmed(search)
-
-search = "diffusion MRI AND Axonal Damage"
-df_mri1 = scrape_pubmed(search)
-
-search = "diffusion MRI AND Axonal Death"
-df_mri2 = scrape_pubmed(search)
-
-
-
-df_concat = pd.concat([df_aud1,df_aud2,df_aud3,df_mri1,df_mri2])
-df_unique = df_concat.drop_duplicates()
-
-
-df_unique.to_csv('/media/mk/Dropbox/Dropbox/articles_aud_unique.csv')
 #     All data are stored under the mnemonic appearing in the Medline
 #  24      file. These mnemonics have the following interpretations:
 #  25
